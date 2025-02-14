@@ -96,7 +96,7 @@ python PythonWeatherForecastFinal_bot.py
    - **⌚️ Now:** Get real-time weather.
    - **📆 Today**: Get today's weather.
    - **📅 Tomorrow**: Get tomorrow's weather.
-   - **🗓️ For 5 Days**: Get a 5-day weather forecast.
+   - **🗓️ For 7 Days**: Get a 7-day weather forecast.
 
 ### Weather Details
 - **Temperature**: Displayed in Celsius.
