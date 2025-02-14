@@ -55,7 +55,7 @@ is a comprehensive weather forecasting tool.
 
 1. Clone the repository
 ```bash
-git clone https://github.com/GhostKX/Global-Weather-Bot.git
+git clone https://github.com/GhostKX/Global-Weather-bot.git
 ```
 
 2. Install required dependencies
