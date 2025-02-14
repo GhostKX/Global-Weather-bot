@@ -18,6 +18,8 @@ API_2 = str(os.getenv('API2'))
 city_details = {}
 seven_days = []
 
+
+# Mapping of weather conditions to emojis for daytime
 condition_to_emoji = {
     "Clear": "☀️",
     "Sunny": "☀️",
@@ -43,6 +45,7 @@ condition_to_emoji = {
 }
 
 
+# Mapping of weather condition codes to emojis for nighttime
 night_icon_code_to_emoji = {
     1000: "🌙",  # Clear
     1003: "☁️",  # Partly Cloudy
@@ -67,6 +70,7 @@ night_icon_code_to_emoji = {
 }
 
 
+# Mapping of weather conditions to emojis for 7-day forecasts
 condition_to_emoji_7_days = {
     "Thunderstorm With Light Rain": "⛈️",  # Thunderstorm
     "Thunderstorm With Rain": "⛈️",  # Thunderstorm
@@ -117,6 +121,7 @@ condition_to_emoji_7_days = {
 }
 
 
+# Handler for the /start command
 @bot.message_handler(commands=['start'])
 def start_bot(message):
     user_id = message.from_user.id
@@ -125,6 +130,7 @@ def start_bot(message):
     bot.register_next_step_handler(message, handle_location)
 
 
+# Handler for text messages
 @bot.message_handler(content_types=['text'])
 def handle_location(message):
     user_id = message.from_user.id
@@ -448,4 +454,5 @@ def weather_for_7_days(message, weather_details):
     bot.register_next_step_handler(message, weather_choose_data_type)
 
 
+# Running the bot infinitely
 bot.polling(non_stop=True)
